@@ -1,0 +1,42 @@
+<div class="form-container">
+    <h3>Person Address Form</h3>
+    <form [formGroup]="addressForm" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" formControlName="fullName" class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="text" formControlName="phoneNumber" class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label>Address</label>
+        <textarea formControlName="address" class="form-control"></textarea>
+      </div>
+  
+      <div class="row">
+        <div class="col">
+          <label>City</label>
+          <input type="text" formControlName="city" class="form-control">
+        </div>
+        <div class="col">
+          <label>State</label>
+          <input type="text" formControlName="state" class="form-control">
+        </div>
+        <div class="col">
+          <label>Zip Code</label>
+          <input type="text" formControlName="zipCode" class="form-control">
+        </div>
+      </div>
+  
+      <div class="btn-group mt-3">
+        <button type="submit" class="btn btn-success">Add</button>
+        <button type="button" class="btn btn-secondary" (click)="closeForm()">Close</button>
+      </div>
+    </form>
+  </div>
+  
+
+  

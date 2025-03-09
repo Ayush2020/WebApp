@@ -1,0 +1,33 @@
+<div class="container mt-4">
+    <h2>Person Details</h2>
+    <button class="btn btn-primary mb-3" (click)="showAddForm = true">+ Add Person</button>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zip Code</th>
+          <th>Phone Number</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let address of addresses">
+          <td>{{ address.fullName }}</td>
+          <td>{{ address.address }}</td>
+          <td>{{ address.city }}</td>
+          <td>{{ address.state }}</td>
+          <td>{{ address.zipCode }}</td>
+          <td>{{ address.phoneNumber }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="editAddress(address)">✎</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteAddress(address.id)">🗑</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
